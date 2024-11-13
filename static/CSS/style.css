@@ -1,0 +1,182 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgba(151, 219, 196, 0.824);
+}
+
+/* Navigation Container Styles */
+.nav_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:green;
+    padding: 10px 20px;
+}
+
+.left_nav {
+    font-size: 1.5em;
+    font-family: Arial, sans-serif;
+}
+
+.right_nav {
+    display: flex;
+    gap: 20px;
+    background-color:green;
+}
+
+.item a {
+    color: #911d1d;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+    background-color:green;
+}
+
+.item a:hover {
+    text-decoration: underline 1px solid black;
+    border-radius: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav_container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .right_nav {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .item {
+        width: 100%;
+        text-align: left;
+    }
+    .item a {
+        display: block;
+        width: 100%;
+    }
+}
+@media (max-width: 480px) {
+    .left_nav {
+        font-size: 1.2em;
+    }
+
+    .item a {
+        font-size: 0.9em;
+    }
+}
+
+.noBook{
+    margin: 1.5em;
+}
+
+.book_container_h1{
+    color: black;
+    margin: 1.5em;
+}
+
+.btn_content{
+    margin-left: 3em;
+}
+.btn{
+    background-color: #4CAF50; 
+    border: none; 
+    color: white; 
+    padding: 15px 32px;
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    margin: 4px 2px;
+    cursor: pointer; 
+    border-radius: 12px; 
+    transition: background-color 0.3s, box-shadow 0.3s
+}
+
+.input{
+    width: 100%;
+    height: 50px;
+    max-width: 400px;
+    padding: 10px 15px;
+    margin: 10px 0;
+    margin-left: 3em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Container for the book cards */
+.book_container_h2 {
+    margin: 14px;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 16px; 
+    justify-content: space-between; 
+}
+/* Individual book card styling */
+.book-card {
+    flex: 1 1 calc(20% - 16px); /* 5 items per row with spacing considered */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    /* background-color: #f5f5f5;*/
+    border: 1px solid black; 
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding: 16px;
+}
+
+/* Book cover image styling */
+.book-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 8px; /* Center the image and add space below it */
+}
+
+/* Book title and author styling */
+.book-card .book-auth {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    .book-card {
+        flex: 1 1 calc(25% - 16px); /* 4 items per row */
+    }
+}
+
+@media (max-width: 992px) {
+    .book-card {
+        flex: 1 1 calc(33.33% - 16px); /* 3 items per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .book-card {
+        flex: 1 1 calc(50% - 16px); /* 2 items per row */
+    }
+}
+
+@media (max-width: 576px) {
+    .book-card {
+        flex: 1 1 calc(75% - 16px); /* 1 item per row */
+    }
+}
+@media (max-width: 310px) {
+    .book-card {
+        flex: 1 1 calc(100% - 16px); /* 1 item per row */
+    }
+}
