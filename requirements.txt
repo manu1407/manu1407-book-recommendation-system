@@ -1,4 +1,6 @@
 flask 
 numpy 
+jinja2
+css
 pandas
 gunicorn
